@@ -7,11 +7,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import FecthExemple from "./pages/FetchExemple";
-import Home from "./pages/Home";
+import MaisonDesVoyagesDeMerde from "./pages/MaisonDesVoyagesDeMerde.tsx";
 import Vinterstellaire from "./pages/Vinterstellaire";
-import NotFound from "./pages/NotFound";
+import VoyageEnDeLorean from "./pages/VoyageEnDelorean";
+import Balec from "./pages/Balec";
 import Vinsolite from "./pages/Vinsolite";
+import NotFound from "./pages/NotFound.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -28,11 +29,27 @@ const router = createBrowserRouter([
 		path: "/", // The root path
 		element: <App />, // Renders the App component for the home page
 		children: [
-			{ path: "/FetchExemple", element: <FecthExemple /> },
-			{ path: "/", element: <Home /> },
-			{ path: "/Vinterstellaire", element: <Vinterstellaire /> },
-			{ path: "/Vinsolite", element: <Vinsolite /> },
-			{ path: "*", element: <NotFound /> },
+			{
+				path: "/la-maison-faut-la-nettoyer",
+				element: <MaisonDesVoyagesDeMerde />,
+			},
+			{
+				path: "/serieux-faut-vraiment-donner-une-url-a-toutes-les-pages",
+				element: <Vinterstellaire />,
+			},
+			{
+				path: "/merde-et-dire-que-cest-pas-la-derniere-page",
+				element: <VoyageEnDeLorean />,
+			},
+			{
+				path: "/jai-oublie-de-fermer-le-frigo-ce-matin",
+				element: <Vinsolite />,
+			},
+			{
+				path: "/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra",
+				element: <Balec />,
+			},
+      { path: "*", element: <NotFound /> },
 		],
 	},
 	// Try adding a new route! For example, "/about" with an About component
@@ -51,6 +68,7 @@ createRoot(rootElement).render(
 	<StrictMode>
 		<RouterProvider router={router} />
 	</StrictMode>,
+	
 );
 
 /**
