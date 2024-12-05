@@ -8,11 +8,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import MaisonDesVoyagesDeMerde from "./pages/MaisonDesVoyagesDeMerde.tsx";
-import Vinterstellaire from "./pages/Vinterstellaire";
 import VoyageEnDeLorean from "./pages/VoyageEnDelorean";
 import Balec from "./pages/Balec";
-import Vinsolite from "./pages/Vinsolite";
 import NotFound from "./pages/NotFound.tsx";
+import LamourBrilleSousLesEtoiles from "./pages/LamourBrilleSousLesEtoiles.tsx";
+import VoyageAuBoutDeLaMort from "./pages/VoyageAuBoutDeLaMort.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/serieux-faut-vraiment-donner-une-url-a-toutes-les-pages",
-				element: <Vinterstellaire />,
+				element: <LamourBrilleSousLesEtoiles />,
 			},
 			{
 				path: "/merde-et-dire-que-cest-pas-la-derniere-page",
@@ -43,13 +43,13 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/jai-oublie-de-fermer-le-frigo-ce-matin",
-				element: <Vinsolite />,
+				element: <VoyageAuBoutDeLaMort />,
 			},
 			{
 				path: "/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra",
 				element: <Balec />,
 			},
-      { path: "*", element: <NotFound /> },
+			{ path: "*", element: <NotFound /> },
 		],
 	},
 	// Try adding a new route! For example, "/about" with an About component
@@ -68,7 +68,6 @@ createRoot(rootElement).render(
 	<StrictMode>
 		<RouterProvider router={router} />
 	</StrictMode>,
-	
 );
 
 /**
