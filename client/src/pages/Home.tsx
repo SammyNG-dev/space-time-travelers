@@ -18,18 +18,27 @@ function Home() {
       .then((data) => setDestination(data));
   }, []);
 
+  const handleChange = (e: string) => {
+    window.location.href = `/${e}`;
+  };
+
   const random = Math.floor(Math.random() * destinations.length);
   return (
     <>
       <nav>
         <label>
-          <select value={""}>
+          <select value={""} onChange={(e) => handleChange(e.target.value)}>
             <option value="">Choisissez votre destination</option>
-            {destinations.map((destination) => (
-              <option value={destination.category} key={destination.id}>
-                {destination.category}
-              </option>
-            ))}
+
+            <option value="Vinterstellaire" key="1">
+              Voyage interstellaire
+            </option>
+            <option value="Vinsolite" key="2">
+              Voyage insolite
+            </option>
+            <option value="Vintemporelle" key="2">
+              Voyage temporel
+            </option>
           </select>
         </label>
       </nav>

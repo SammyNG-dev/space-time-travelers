@@ -46,14 +46,6 @@ function Vinterstellaire() {
         <Loader />
       ) : (
         <div>
-          <h1>Destinations</h1>
-          {destinations.map((destination) => (
-            <figure key={destination.id}>
-              <h2>{destination.name}</h2>
-              <p>{destination.description}</p>
-            </figure>
-          ))}
-
           <h2>Voyages interstellaires</h2>
           {destinationInterstellaire.length > 0 ? (
             destinationInterstellaire.map((destination) => (
