@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 interface destination {
   id: number;
   name: string;
+  category: string;
   description: string;
   sound: string;
   image: string;
@@ -20,6 +21,18 @@ function Home() {
   const random = Math.floor(Math.random() * destinations.length);
   return (
     <>
+      <nav>
+        <label>
+          <select value={""}>
+            <option value="">Choisissez votre destination</option>
+            {destinations.map((destination) => (
+              <option value={destination.category} key={destination.id}>
+                {destination.category}
+              </option>
+            ))}
+          </select>
+        </label>
+      </nav>
       <section className="StarAligned">
         {destinations.length === 0 ? (
           <Loader />

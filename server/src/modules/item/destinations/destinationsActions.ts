@@ -26,7 +26,7 @@ const destinations = [
   {
     id: 4,
     name: "Tataouine-sur-Mer",
-    categorie: "Voyage interstellaire",
+    categorie: "Voyage insolite",
     description: "Non ce n'est pas en Tunisie",
     sound: "snd.txt",
     image: "img.txt",
