@@ -45,3 +45,7 @@ figure {
   align-self: center;
   text-align: center;
 }
+
+img {
+  width: clamp(100px, 80vw, 550px);
+}
