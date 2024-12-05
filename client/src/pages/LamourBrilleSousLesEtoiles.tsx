@@ -9,11 +9,11 @@ interface destination {
 	image: string;
 }
 
-function Vinsolite() {
+function LamourBrilleSousLesEtoiles() {
 	const [destinations, setDestinations] = useState<destination[]>([]);
-	const [destinationInsolite, setDestinationInsolite] = useState<destination[]>(
-		[],
-	);
+	const [destinationInterstellaire, setDestinationInterstellaire] = useState<
+		destination[]
+	>([]);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
@@ -24,12 +24,12 @@ function Vinsolite() {
 				const data = await response.json();
 				setDestinations(data);
 
-				// Récupération des destinations insolites
-				const responseInsolite = await fetch(
-					"http://localhost:3310/api/destinations/?categorie=insolite",
+				// Récupération des destinations interstellaires
+				const responseInterstellaire = await fetch(
+					"http://localhost:3310/api/destinations/?categorie=interstellaire",
 				);
-				const insoliteData = await responseInsolite.json();
-				setDestinationInsolite(insoliteData);
+				const interstellaireData = await responseInterstellaire.json();
+				setDestinationInterstellaire(interstellaireData);
 			} catch (error) {
 				console.error("Erreur lors de la récupération des données :", error);
 			} finally {
@@ -46,9 +46,9 @@ function Vinsolite() {
 				<Loader />
 			) : (
 				<div>
-					<h2>Voyages insolites</h2>
-					{destinationInsolite.length > 0 ? (
-						destinationInsolite.map((destination) => (
+					<h2>Voyages interstellaires</h2>
+					{destinationInterstellaire.length > 0 ? (
+						destinationInterstellaire.map((destination) => (
 							<figure key={destination.id}>
 								<h3>{destination.name}</h3>
 								<img src={destination.image} alt="pouetpouet" />
@@ -56,7 +56,7 @@ function Vinsolite() {
 							</figure>
 						))
 					) : (
-						<p>Aucune destination insolite disponible.</p>
+						<p>Aucune destination interstellaire disponible.</p>
 					)}
 				</div>
 			)}
@@ -64,4 +64,4 @@ function Vinsolite() {
 	);
 }
 
-export default Vinsolite;
+export default LamourBrilleSousLesEtoiles;
