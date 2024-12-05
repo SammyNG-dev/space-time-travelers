@@ -51,6 +51,7 @@ function Vinterstellaire() {
             destinationInterstellaire.map((destination) => (
               <figure key={destination.id}>
                 <h3>{destination.name}</h3>
+                <img src={destination.image} alt="pouetpouet" />
                 <p>{destination.description}</p>
               </figure>
             ))

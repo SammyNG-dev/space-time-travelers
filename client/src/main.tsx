@@ -10,8 +10,9 @@ import App from "./App";
 import MaisonDesVoyagesDeMerde from "./pages/MaisonDesVoyagesDeMerde.tsx";
 import Vinterstellaire from "./pages/Vinterstellaire";
 import VoyageEnDeLorean from "./pages/VoyageEnDelorean";
-import VoyageAuBoutDeLaMort from "./pages/VoyageAuBoutDeLaMort";
 import Balec from "./pages/Balec";
+import Vinsolite from "./pages/Vinsolite";
+import NotFound from "./pages/NotFound.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -42,12 +43,13 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/jai-oublie-de-fermer-le-frigo-ce-matin",
-				element: <VoyageAuBoutDeLaMort />,
+				element: <Vinsolite />,
 			},
 			{
 				path: "/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra",
 				element: <Balec />,
 			},
+      { path: "*", element: <NotFound /> },
 		],
 	},
 	// Try adding a new route! For example, "/about" with an About component
@@ -66,6 +68,7 @@ createRoot(rootElement).render(
 	<StrictMode>
 		<RouterProvider router={router} />
 	</StrictMode>,
+	
 );
 
 /**
