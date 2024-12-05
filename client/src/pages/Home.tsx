@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 interface destination {
   id: number;
   name: string;
+  category: string;
   description: string;
   sound: string;
   image: string;
@@ -17,9 +18,30 @@ function Home() {
       .then((data) => setDestination(data));
   }, []);
 
+  const handleChange = (e: string) => {
+    window.location.href = `/${e}`;
+  };
+
   const random = Math.floor(Math.random() * destinations.length);
   return (
     <>
+      <nav>
+        <label>
+          <select value={""} onChange={(e) => handleChange(e.target.value)}>
+            <option value="">Choisissez votre destination</option>
+
+            <option value="Vinterstellaire" key="1">
+              Voyage interstellaire
+            </option>
+            <option value="Vinsolite" key="2">
+              Voyage insolite
+            </option>
+            <option value="Vintemporelle" key="2">
+              Voyage temporel
+            </option>
+          </select>
+        </label>
+      </nav>
       <section className="StarAligned">
         {destinations.length === 0 ? (
           <Loader />
@@ -27,6 +49,10 @@ function Home() {
           <figure>
             <h2>{destinations[random].name}</h2>
             <p>{destinations[random].description}</p>
+            <img
+              src={destinations[random].image}
+              alt={destinations[random].name}
+            />
           </figure>
         )}
       </section>
