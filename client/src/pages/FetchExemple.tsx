@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 interface destination {
   id: number;
@@ -15,16 +16,30 @@ function FecthExemple() {
       .then((res) => res.json())
       .then((data) => setDestination(data));
   });
+
+  const [destinationInterstellaire, setDestinationParCategorie] = useState<
+    destination[] | []
+  >([]);
+  useEffect(() => {
+    fetch("http://localhost:3310/api/destinations/?categorie=interstellaire")
+      .then((res) => res.json())
+      .then((data) => setDestinationParCategorie(data));
+  });
   return (
     <>
       <div>
-        {destinations.map((destination) => (
-          <figure key={destination.id}>
-            <h2>{destination.name}</h2>
-            <p>{destination.description}</p>
-          </figure>
-        ))}
+        {destinations.length === 0 ? (
+          <Loader />
+        ) : (
+          destinations.map((destination) => (
+            <figure key={destination.id}>
+              <h2>{destination.name}</h2>
+              <p>{destination.description}</p>
+            </figure>
+          ))
+        )}
       </div>
+      <h2>{destinationInterstellaire[0].name}</h2>
     </>
   );
 }
