@@ -46,8 +46,8 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra",
-				element: <Balec />
-			}
+				element: <Balec />,
+			},
 		],
 	},
 	// Try adding a new route! For example, "/about" with an About component

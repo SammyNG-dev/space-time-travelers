@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 
 function HeaderDesDestinationsDeMerde() {
-
 	return (
-
 		<div className="la_flemme">
-            {/* <ul>
+			{/* <ul>
                 <h2>Liste de courses à faire</h2>
                 <li>Du pain</li>
                 <li>Du vin</li>
@@ -13,10 +11,8 @@ function HeaderDesDestinationsDeMerde() {
                 <li>Du fromage</li>
             </ul> 
 			Oui c'est du code commenté, t'as un problème ?*/}
-			<img
-				src=""
-				alt="Mais putain c'est pas de ma faute si l'image ne s'affiche pas ! Si t'es aveugle c'est pas de ma faute non plus !"
-			/>
+			<div className="vas_maintenant_va_faire_le_selecteur_de_cette_classe_bon_courage">
+			</div>
 			<nav>
 				{/* C'est Matthieu qui offre les croissants demain */}
 				<Link to="/la-maison-faut-la-nettoyer">Home Shit Travels</Link>
@@ -27,8 +23,12 @@ function HeaderDesDestinationsDeMerde() {
 					Le Magicien du Temps
 				</Link>
 				{/* Merde, mes commentaires sont vraiments partis sur GitHub ? */}
-				<Link to="/jai-oublie-de-fermer-le-frigo-ce-matin">T'as pas peur de la mort ?</Link>
-				<Link to="/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra">Balec</Link>
+				<Link to="/jai-oublie-de-fermer-le-frigo-ce-matin">
+					T'as pas peur de la mort ?
+				</Link>
+				<Link to="/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra">
+					Balec
+				</Link>
 			</nav>
 		</div>
 	);

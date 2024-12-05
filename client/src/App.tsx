@@ -9,9 +9,8 @@ function App() {
 				<HeaderDesDestinationsDeMerde />
 			</header>
 			<main>
-				
+				<Outlet />
 			</main>
-			<Outlet />
 		</>
 	);
 }
