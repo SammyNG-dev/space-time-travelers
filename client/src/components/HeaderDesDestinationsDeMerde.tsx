@@ -12,6 +12,11 @@ function HeaderDesDestinationsDeMerde() {
             </ul> 
 			Oui c'est du code commenté, t'as un problème ?*/}
 			<div className="vas_maintenant_va_faire_le_selecteur_de_cette_classe_bon_courage">
+				<img
+					id="logoheader"
+					src="src/assets/images/logo_desktop.png"
+					alt="c'est pas du toc"
+				/>
 			</div>
 			<nav>
 				{/* C'est Matthieu qui offre les croissants demain */}
