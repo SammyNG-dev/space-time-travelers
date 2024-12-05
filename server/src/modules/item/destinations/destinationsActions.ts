@@ -36,7 +36,7 @@ const destinations = [
 import type { RequestHandler } from "express";
 
 const browse: RequestHandler = async (req, res) => {
-  if (req.query.categorie !== null) {
+  if (req.query.categorie != null) {
     const filteredDestinations = destinations.filter((destination) =>
       destination.categorie.includes(req.query.categorie as string)
     );
