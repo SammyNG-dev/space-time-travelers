@@ -7,8 +7,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import FecthExemple from "./pages/FetchExemple";
-import MaisonDesVoyagesDeMerde from "./pages/MaisonDesVoyagesDeMerde";
+import MaisonDesVoyagesDeMerde from "./pages/MaisonDesVoyagesDeMerde.tsx";
+import Vinterstellaire from "./pages/Vinterstellaire";
+import VoyageEnDeLorean from "./pages/VoyageEnDelorean";
+import VoyageAuBoutDeLaMort from "./pages/VoyageAuBoutDeLaMort";
+import Balec from "./pages/Balec";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -27,8 +30,24 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/la-maison-faut-la-nettoyer",
-				element: <MaisonDesVoyagesDeMerde />
+				element: <MaisonDesVoyagesDeMerde />,
 			},
+			{
+				path: "/serieux-faut-vraiment-donner-une-url-a-toutes-les-pages",
+				element: <Vinterstellaire />,
+			},
+			{
+				path: "/merde-et-dire-que-cest-pas-la-derniere-page",
+				element: <VoyageEnDeLorean />,
+			},
+			{
+				path: "/jai-oublie-de-fermer-le-frigo-ce-matin",
+				element: <VoyageAuBoutDeLaMort />,
+			},
+			{
+				path: "/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra",
+				element: <Balec />
+			}
 		],
 	},
 	// Try adding a new route! For example, "/about" with an About component

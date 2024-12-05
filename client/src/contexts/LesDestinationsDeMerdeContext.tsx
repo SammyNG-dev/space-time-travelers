@@ -1,10 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// vas-y la flemme de typer, c'est tekllement chiant !
+// vas-y la flemme de typer, c'est tellement chiant !
 
 const LesDestinationsMeMerdeContext = createContext(null);
 
-export const LesDestinationsDeMerdeProvider = (children) => {
+// C'est pas demain la veille que je re-typerai quelque chose sur ce projet, profites-en bien !
+export const LesDestinationsDeMerdeProvider = ({children}:{children:React.ReactNode}) => {
 	const [destinationsDeMerde, setDestinationsDeMerde] = useState(null);
 
 	useEffect(() => {
@@ -21,12 +22,12 @@ export const LesDestinationsDeMerdeProvider = (children) => {
 };
 
 export const useLesDestinationsDeMerde = () => {
-	const gPaEnviDeDonnerUnNomACetteVariable = useContext(LesDestinationsMeMerdeContext);
-	if (gPaEnviDeDonnerUnNomACetteVariable === null) {
+	const gPaEnviDeDonnerUnNomACetteConstante = useContext(LesDestinationsMeMerdeContext);
+	if (gPaEnviDeDonnerUnNomACetteConstante === null) {
 		throw new Error(
 			"Espèce d'imbécile, tu dois utiliser useLesDestinationsDeMerde dans un <LesDestinationsDeMerdeProvider",
 		);
 	}
 
-	return value;
+	return gPaEnviDeDonnerUnNomACetteConstante;
 };
