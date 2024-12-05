@@ -9,6 +9,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import FecthExemple from "./pages/FetchExemple";
 import Home from "./pages/Home";
+import Vinterstellaire from "./pages/Vinterstellaire";
+import NotFound from "./pages/NotFound";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -27,6 +29,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/FetchExemple", element: <FecthExemple /> },
       { path: "/", element: <Home /> },
+      { path: "/Vinterstellaire", element: <Vinterstellaire /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
   // Try adding a new route! For example, "/about" with an About component

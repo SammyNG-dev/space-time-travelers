@@ -21,9 +21,22 @@ body {
   align-content: center;
 }
 
-.StarAligned {
+#root {
+  justify-content: center;
+  align-content: center;
+}
+
+.StarAligned,
+h2,
+p {
   align-self: center;
   justify-self: center;
+}
+
+nav {
+  align-self: center;
+  justify-self: center;
+  color: black;
 }
 
 figure {
