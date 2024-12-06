@@ -1,0 +1,5 @@
+.laisse_pas_trainer_ton_fils {
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
