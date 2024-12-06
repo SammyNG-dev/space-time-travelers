@@ -16,7 +16,7 @@ body {
 	line-height: 1.7;
 	color: var(--textColor);
 	margin: 0;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	justify-content: center;
 	align-content: center;
 }
@@ -52,6 +52,10 @@ nav {
 	width: 100%;
 }
 
+.je_danse_le_mia {
+	height: 100%;
+}
+
 select {
 	margin-top: 20px;
 	border-radius: 10px;
@@ -79,6 +83,13 @@ a {
 footer img {
 	width: 30px;
 }
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
 /* néon */
 
 .neon-border {

@@ -59,7 +59,7 @@ function LamourBrilleSousLesEtoiles() {
     }
   };
   return (
-    <div className="je_danse_le_mia">
+    <div>
       <video className="laisse_pas_trainer_ton_fils" autoPlay muted loop>
 				<source src={Etoile} />
 			</video>
@@ -67,7 +67,7 @@ function LamourBrilleSousLesEtoiles() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="content">
+        <div>
           <h2>Voyages interstellaires</h2>
           {destinationInterstellaire.length > 0 ? (
             destinationInterstellaire.map((destination) => (
@@ -91,7 +91,7 @@ function LamourBrilleSousLesEtoiles() {
           )}
         </div>
       )}
-    </div>
+      </div>
   );
 }
 
