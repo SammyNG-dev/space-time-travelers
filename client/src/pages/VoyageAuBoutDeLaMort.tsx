@@ -60,7 +60,7 @@ function VoyageAuBoutDeLaMort() {
   };
 
   return (
-    <div className="je_danse_le_mia">
+    <div>
       <video className="laisse_pas_trainer_ton_fils" autoPlay muted loop>
 				<source src={Mort} />
 			</video>
@@ -68,7 +68,7 @@ function VoyageAuBoutDeLaMort() {
       {loading ? (
         <Loader />
       ) : (
-        <div className="content">
+        <div>
           <h2>Voyages insolites</h2>
           {destinationInsolite.length > 0 ? (
             destinationInsolite.map((destination) => (
