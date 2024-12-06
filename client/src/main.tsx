@@ -7,6 +7,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import MaisonDesVoyagesDeMerde from "./pages/MaisonDesVoyagesDeMerde.tsx";
+import VoyageEnDeLorean from "./pages/VoyageEnDelorean";
+import Balec from "./pages/Balec";
+import NotFound from "./pages/NotFound.tsx";
+import LamourBrilleSousLesEtoiles from "./pages/LamourBrilleSousLesEtoiles.tsx";
+import VoyageAuBoutDeLaMort from "./pages/VoyageAuBoutDeLaMort.tsx";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -22,6 +28,30 @@ const router = createBrowserRouter([
   {
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
+    children: [
+      { path: "/", element: <MaisonDesVoyagesDeMerde /> },
+      {
+        path: "/la-maison-faut-la-nettoyer",
+        element: <MaisonDesVoyagesDeMerde />,
+      },
+      {
+        path: "/serieux-faut-vraiment-donner-une-url-a-toutes-les-pages",
+        element: <LamourBrilleSousLesEtoiles />,
+      },
+      {
+        path: "/merde-et-dire-que-cest-pas-la-derniere-page",
+        element: <VoyageEnDeLorean />,
+      },
+      {
+        path: "/jai-oublie-de-fermer-le-frigo-ce-matin",
+        element: <VoyageAuBoutDeLaMort />,
+      },
+      {
+        path: "/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra",
+        element: <Balec />,
+      },
+      { path: "*", element: <NotFound /> },
+    ],
   },
   // Try adding a new route! For example, "/about" with an About component
 ]);
@@ -43,26 +73,25 @@ createRoot(rootElement).render(
 
 /**
  * Helpful Notes:
- * 
+ *
  * 1. Adding More Routes:
  *    To add more pages to your app, first create a new component (e.g., About.tsx).
  *    Then, import that component above like this:
- * 
+ *
  *    import About from "./pages/About";
- * 
+ *
  *    Add a new route to the router:
- * 
+ *
  *      {
  *        path: "/about",
  *        element: <About />,  // Renders the About component
  *      }
- * 
+ *
  * 2. Try Nested Routes:
  *    For more complex applications, you can nest routes. This lets you have sub-pages within a main page.
  *    Documentation: https://reactrouter.com/en/main/start/tutorial#nested-routes
- * 
+ *
  * 3. Experiment with Dynamic Routes:
  *    You can create routes that take parameters (e.g., /users/:id).
  *    Documentation: https://reactrouter.com/en/main/start/tutorial#url-params-in-loaders
  */
-
