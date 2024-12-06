@@ -88,7 +88,7 @@ const destinations = [
 		name: "Egypte",
 		categorie: "Voyage temporelle",
 		description: "Pyramide et balades sur le Nil.",
-		sound: "http://localhost:3310/assets/images/trex.mp3",
+		sound: "http://localhost:3310/assets/images/oiseau.mp3",
 		image: "http://localhost:3310/assets/images/pyramide.jpg",
 	},
 	{
