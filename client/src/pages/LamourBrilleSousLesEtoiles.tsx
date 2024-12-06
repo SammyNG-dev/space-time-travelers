@@ -51,7 +51,9 @@ function LamourBrilleSousLesEtoiles() {
 						destinationInterstellaire.map((destination) => (
 							<figure key={destination.id}>
 								<h3>{destination.name}</h3>
+								<div className="neon-border">
 								<img src={destination.image} alt="pouetpouet" />
+								</div>
 								<p>{destination.description}</p>
 							</figure>
 						))
