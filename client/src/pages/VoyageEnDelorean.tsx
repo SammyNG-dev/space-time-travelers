@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader";
+import Temps from "../assets/videos/VoyageEnDeLorean.mp4"
 
 interface destination {
   id: number;
@@ -59,11 +60,15 @@ function VoyageEnDelorean() {
   };
 
   return (
-    <>
+    <div className="je_danse_le_mia">
+      <video className="laisse_pas_trainer_ton_fils" autoPlay muted loop>
+				<source src={Temps} />
+			</video>
+
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <div className="content">
           <h2>Voyages temporels</h2>
           {destinationVtemporel.length > 0 ? (
             destinationVtemporel.map((destination) => (
@@ -87,7 +92,7 @@ function VoyageEnDelorean() {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
