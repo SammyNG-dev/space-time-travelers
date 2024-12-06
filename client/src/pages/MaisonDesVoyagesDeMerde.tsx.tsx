@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
+import Maison from "../assets/videos/MaisonDesVoyagesDeMerde.mp4"
 
 interface destination {
   id: number;
@@ -25,7 +26,11 @@ function Home() {
   const random = Math.floor(Math.random() * destinations.length);
 
   return (
-    <>
+    <div className="je_danse_le_mia">
+      <video className="laisse_pas_trainer_ton_fils" autoPlay muted loop>
+				<source src={Maison} />
+			</video>
+    <div className="content"></div>
       <nav>
         <label>
           <select value={""} onChange={(e) => handleChange(e.target.value)}>
@@ -62,7 +67,7 @@ function Home() {
           </figure>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader";
+import Mort from "../assets/videos/VoyageAuBoutDeLaMort.mp4"
 
 interface destination {
   id: number;
@@ -59,11 +60,15 @@ function VoyageAuBoutDeLaMort() {
   };
 
   return (
-    <>
+    <div className="je_danse_le_mia">
+      <video className="laisse_pas_trainer_ton_fils" autoPlay muted loop>
+				<source src={Mort} />
+			</video>
+
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <div className="content">
           <h2>Voyages insolites</h2>
           {destinationInsolite.length > 0 ? (
             destinationInsolite.map((destination) => (
@@ -87,7 +92,7 @@ function VoyageAuBoutDeLaMort() {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }
 export default VoyageAuBoutDeLaMort;

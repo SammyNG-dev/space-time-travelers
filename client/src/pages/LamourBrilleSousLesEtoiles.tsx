@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader";
+import Etoile from "../assets/videos/LamourBrilleSousLesEtoiles.mp4"
 
 interface destination {
   id: number;
@@ -58,11 +59,15 @@ function LamourBrilleSousLesEtoiles() {
     }
   };
   return (
-    <>
+    <div className="je_danse_le_mia">
+      <video className="laisse_pas_trainer_ton_fils" autoPlay muted loop>
+				<source src={Etoile} />
+			</video>
+
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <div className="content">
           <h2>Voyages interstellaires</h2>
           {destinationInterstellaire.length > 0 ? (
             destinationInterstellaire.map((destination) => (
@@ -86,7 +91,7 @@ function LamourBrilleSousLesEtoiles() {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
