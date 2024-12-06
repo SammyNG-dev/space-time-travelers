@@ -45,7 +45,7 @@ function LamourBrilleSousLesEtoiles() {
 			{loading ? (
 				<Loader />
 			) : (
-				<div>
+				<div id="laisse_pas_trainer_ton_fils">
 					<h2>Voyages interstellaires</h2>
 					{destinationInterstellaire.length > 0 ? (
 						destinationInterstellaire.map((destination) => (
