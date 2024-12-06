@@ -122,24 +122,61 @@ footer img {
 	}
 }
 
+/* src/components/NeonText.css */
 .neon-text {
-	font-size: 20px; /* Taille du texte */
-	font-weight: bold;
-	color: #fff;
-	text-shadow: 0 0 5px rgb(144, 93, 240), 0 0 10px rgb(144, 93, 240), 0 0 20px rgb(144, 93, 240), 0 0 40px rgb(144, 93, 240), 0 0
-		80px rgb(144, 93, 240), 0 0 90px rgb(144, 93, 240), 0 0 100px rgb(144, 93, 240), 0 0 150px rgb(144, 93, 240);
-	animation: neon-text 1.5s infinite alternate;
+  font-size: 20px; /* Taille du texte */
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-shadow: 
+    0 0 10px rgb(75, 0, 130),  /* Indigo */
+    0 0 20px rgb(75, 0, 130), 
+    0 0 30px rgb(75, 0, 130), 
+    0 0 40px rgb(75, 0, 130),
+    0 0 10px rgb(138, 43, 226), /* Violet */
+    0 0 20px rgb(138, 43, 226), 
+    0 0 30px rgb(138, 43, 226), 
+    0 0 40px rgb(138, 43, 226),
+    0 0 10px rgb(4, 6, 146),  /* Cyan */
+    0 0 20px rgb(4, 6, 146), 
+    0 0 30px rgb(4, 6, 146), 
+    0 0 40px rgb(4, 6, 146);
+  animation: neon 3s infinite alternate;
 }
-@keyframes neon-text {
-	0% {
-		text-shadow: 0 0 5px rgb(144, 93, 240), 0 0 10px rgb(144, 93, 240), 0 0 20px rgb(144, 93, 240), 0 0 40px rgb(144, 93, 240), 0 0
-			80px rgb(144, 93, 240), 0 0 90px rgb(144, 93, 240), 0 0 100px rgb(144, 93, 240), 0 0 150px rgb(144, 93, 240);
-	}
-	100% {
-		text-shadow: 0 0 10px rgb(144, 93, 240), 0 0 20px rgb(144, 93, 240), 0 0 30px rgb(144, 93, 240), 0 0 60px rgb(144, 93, 240), 0 0
-			120px rgb(144, 93, 240), 0 0 180px rgb(144, 93, 240), 0 0 240px rgb(144, 93, 240), 0 0 300px rgb(144, 93, 240);
-	}
+
+@keyframes neon {
+  0% {
+    text-shadow: 
+      0 0 10px rgb(75, 0, 130),  /* Indigo */
+      0 0 20px rgb(75, 0, 130), 
+      0 0 30px rgb(75, 0, 130), 
+      0 0 40px rgb(75, 0, 130);
+  }
+  33% {
+    text-shadow: 
+      0 0 10px rgb(138, 43, 226), /* Violet */
+      0 0 20px rgb(138, 43, 226), 
+      0 0 30px rgb(138, 43, 226), 
+      0 0 40px rgb(138, 43, 226);
+  }
+  66% {
+    text-shadow: 
+      0 0 10px rgb(4, 6, 146),  /* Cyan */
+      0 0 20px rgb(4, 6, 146), 
+      0 0 30px rgb(4, 6, 146), 
+      0 0 40px rgb(4, 6, 146);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px rgb(75, 0, 130),  /* Indigo */
+      0 0 20px rgb(75, 0, 130), 
+      0 0 30px rgb(75, 0, 130), 
+      0 0 40px rgb(75, 0, 130);
+  }
 }
+
+
+
 
 @media screen and (max-width: 767px) {
 	nav {
