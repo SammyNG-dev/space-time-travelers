@@ -1,0 +1,15 @@
+.vas_maintenant_va_faire_le_selecteur_de_cette_classe_bon_courage {
+	background-color: rgb(76, 10, 98);
+	display: flex;
+	justify-content: center;
+}
+img#logoheader {
+	width: 400px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+	img#logoheader {
+		width: 900px;
+	}
+}
