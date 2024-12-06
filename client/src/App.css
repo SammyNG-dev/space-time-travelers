@@ -1,85 +1,187 @@
 :root {
-  --backroundColor: #27022c;
-  --textColor: #fcf9db;
+	--backroundColor: #27022c;
+	--textColor: #fcf9db;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: var(--backroundColor);
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--textColor);
-  margin: 0;
-  min-height: 100vh;
-  justify-content: center;
-  align-content: center;
+	background-color: var(--backroundColor);
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	line-height: 1.7;
+	color: var(--textColor);
+	margin: 0;
+	min-height: 100vh;
+	justify-content: center;
+	align-content: center;
 }
 
 #root {
-  justify-content: center;
-  align-content: center;
+	justify-content: center;
+	align-content: center;
 }
 
 .StarAligned,
 h2,
 p,
 h1 {
-  align-self: center;
-  justify-self: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+p{
+  padding-bottom: 30px;
+}
+h3{
+  margin-bottom: 30px;
 }
 
 nav {
-  align-self: center;
-  justify-self: center;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
-  justify-content: space-around;
-  width: 100%;
+	align-self: center;
+	justify-self: center;
+	color: black;
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	justify-content: space-around;
+	width: 100%;
 }
 
 select {
-  margin-top: 20px;
-  border-radius: 10px;
-  background-color: #f2a5f4;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: #f2a5f4;
 }
 
-div h2 {
-  margin-top: 15px;
-}
 
 figure {
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  margin: 20px;
+	justify-content: center;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+	margin: 20px;
 }
 
 img {
-  width: clamp(100px, 80vw, 550px);
+	width: clamp(100px, 80vw, 550px);
 }
 
 a {
-  color: var(--textColor);
-  text-decoration: none;
+	color: var(--textColor);
+	text-decoration: none;
 }
 
 footer img {
-  width: 30px;
+	width: 30px;
+}
+/* néon */
+
+.neon-border {
+	position: relative;
+	display: inline-block;
 }
 
-@media screen and (max-width: 767px) {
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.neon-border img {
+	display: block;
+	width: 600px; /* Ajustez la largeur à ce que vous souhaitez */
+	height: auto;
+}
+
+.neon-border::before,
+.neon-border::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: calc(100%);
+	height: calc(100%);
+	border: 5px solid rgb(144, 93, 240);
+	box-shadow: 0 0 2px rgb(144, 93, 240), 0 0 2px rgb(144, 93, 240), 0 0 40px
+		rgb(144, 93, 240), 0 0 50px rgb(144, 93, 240);
+	animation: neon-border 1.5s infinite alternate;
+	pointer-events: none;
+}
+
+.neon-border::after {
+	filter: blur(20px);
+}
+
+@keyframes neon-border {
+	0% {
+		box-shadow: 0 0 5px rgb(144, 93, 240), 0 0 10px rgb(144, 93, 240), 0 0 20px
+			rgb(144, 93, 240), 0 0 30px rgb(144, 93, 240);
+	}
+	100% {
+		box-shadow: 0 0 20px rgb(144, 93, 240), 0 0 30px rgb(144, 93, 240), 0 0 40px
+			rgb(144, 93, 240), 0 0 50px rgb(144, 93, 240);
+	}
+}
+
+/* src/components/NeonText.css */
+.neon-text {
+  font-size: 20px; /* Taille du texte */
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-shadow: 
+    0 0 10px rgb(75, 0, 130),  /* Indigo */
+    0 0 20px rgb(75, 0, 130), 
+    0 0 30px rgb(75, 0, 130), 
+    0 0 40px rgb(75, 0, 130),
+    0 0 10px rgb(138, 43, 226), /* Violet */
+    0 0 20px rgb(138, 43, 226), 
+    0 0 30px rgb(138, 43, 226), 
+    0 0 40px rgb(138, 43, 226),
+    0 0 10px rgb(4, 6, 146),  /* Cyan */
+    0 0 20px rgb(4, 6, 146), 
+    0 0 30px rgb(4, 6, 146), 
+    0 0 40px rgb(4, 6, 146);
+  animation: neon 3s infinite alternate;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 
+      0 0 10px rgb(75, 0, 130),  /* Indigo */
+      0 0 20px rgb(75, 0, 130), 
+      0 0 30px rgb(75, 0, 130), 
+      0 0 40px rgb(75, 0, 130);
   }
+  33% {
+    text-shadow: 
+      0 0 10px rgb(138, 43, 226), /* Violet */
+      0 0 20px rgb(138, 43, 226), 
+      0 0 30px rgb(138, 43, 226), 
+      0 0 40px rgb(138, 43, 226);
+  }
+  66% {
+    text-shadow: 
+      0 0 10px rgb(4, 6, 146),  /* Cyan */
+      0 0 20px rgb(4, 6, 146), 
+      0 0 30px rgb(4, 6, 146), 
+      0 0 40px rgb(4, 6, 146);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px rgb(75, 0, 130),  /* Indigo */
+      0 0 20px rgb(75, 0, 130), 
+      0 0 30px rgb(75, 0, 130), 
+      0 0 40px rgb(75, 0, 130);
+  }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+	nav {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }

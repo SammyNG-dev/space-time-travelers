@@ -53,10 +53,12 @@ function Home() {
           <figure>
             <h2>{destinations[random].name}</h2>
             <p>{destinations[random].description}</p>
-            <img
-              src={destinations[random].image}
-              alt={destinations[random].name}
-            />
+            <div className="neon-border">
+              <img
+                src={destinations[random].image}
+                alt={destinations[random].name}
+              />
+            </div>
           </figure>
         )}
       </section>

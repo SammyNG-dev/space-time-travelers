@@ -44,6 +44,7 @@ footer h2 {
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .footer {
+    align-items: center;
     font-size: xx-large;
   }
   .imagesRS {

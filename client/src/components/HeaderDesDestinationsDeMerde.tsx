@@ -20,18 +20,18 @@ function HeaderDesDestinationsDeMerde() {
       </div>
       <nav>
         {/* C'est Matthieu qui offre les croissants demain */}
-        <Link to="/">Home Travels</Link>
-        <Link to="/serieux-faut-vraiment-donner-une-url-a-toutes-les-pages">
+        <Link className="neon-text" to="/">Home Travels</Link>
+        <Link className="neon-text" to="/serieux-faut-vraiment-donner-une-url-a-toutes-les-pages">
           L'amour brille sous les étoiles
         </Link>
-        <Link to="/merde-et-dire-que-cest-pas-la-derniere-page">
+        <Link className="neon-text" to="/merde-et-dire-que-cest-pas-la-derniere-page">
           Le Magicien du Temps
         </Link>
         {/* Merde, mes commentaires sont vraiments partis sur GitHub ? */}
-        <Link to="/jai-oublie-de-fermer-le-frigo-ce-matin">
+        <Link className="neon-text" to="/jai-oublie-de-fermer-le-frigo-ce-matin">
           T'as pas peur de la mort ?
         </Link>
-        <Link to="/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra">
+        <Link className="neon-text" to="/terre-brulee-au-vent-des-landes-de-pierres-autour-des-lacs-cest-pour-les-vivants-un-peu-denfer-le-conemarra">
           Balec
         </Link>
       </nav>
