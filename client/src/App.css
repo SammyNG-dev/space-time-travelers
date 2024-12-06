@@ -1,6 +1,6 @@
 :root {
   --backroundColor: #27022c;
-  --textColor: white;
+  --textColor: #fcf9db;
 }
 
 * {
@@ -38,6 +38,21 @@ nav {
   align-self: center;
   justify-self: center;
   color: black;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+}
+
+select {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f2a5f4;
+}
+
+div h2 {
+  margin-top: 15px;
 }
 
 figure {
@@ -45,6 +60,7 @@ figure {
   justify-self: center;
   align-self: center;
   text-align: center;
+  margin: 20px;
 }
 
 img {
@@ -52,14 +68,18 @@ img {
 }
 
 a {
-  color: white;
+  color: var(--textColor);
   text-decoration: none;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
-  justify-content: space-around;
-  width: 100%;
+footer img {
+  width: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
