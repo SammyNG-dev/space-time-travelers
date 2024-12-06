@@ -4,7 +4,7 @@ const destinations = [
     name: "Tatooine",
     categorie: "Voyage interstellaire",
     description: "Tatooine est une magnifique planète couverte de sable.",
-    sound: "snd.txt",
+    sound: "http://localhost:3310/assets/images/StarWars-CantinaSong",
     image: "http://localhost:3310/assets/images/Tatooine_coucher_de_soleil.jpg",
   },
   {
@@ -12,7 +12,7 @@ const destinations = [
     name: "Cratère de volcan",
     categorie: "Voyage insolite",
     description: "Un endroit pour être bien au chaud et confortable",
-    sound: "snd.txt",
+    sound: "http://localhost:3310/assets/images/volcan.mp3",
     image: "http://localhost:3310/assets/images/Montagne_du_Destin_1.jpg",
   },
   {
@@ -20,7 +20,7 @@ const destinations = [
     name: "Antiquité",
     categorie: "Voyage temporelle",
     description: "Nom de Zeus!",
-    sound: "snd.txt",
+    sound: "http://localhost:3310/assets/images/tonnerre.ogg",
     image: "http://localhost:3310/assets/images/Voyage-dans-le-temps.jpg",
   },
   {
@@ -28,7 +28,7 @@ const destinations = [
     name: "Tataouine-sur-Mer",
     categorie: "Voyage insolite",
     description: "Non ce n'est pas en Tunisie",
-    sound: "snd.txt",
+    sound: "http://localhost:3310/assets/images/vague.mp3",
     image: "http://localhost:3310/assets/images/Tataouine_plage.jpg",
   },
 ];
